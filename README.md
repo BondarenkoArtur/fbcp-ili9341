@@ -1,3 +1,9 @@
+### Options for GMT130 Chinese display
+
+```
+cmake -DST7789=ON -DGPIO_TFT_DATA_CONTROL=5 -DGPIO_TFT_RESET_PIN=6 -DSPI_BUS_CLOCK_DIVISOR=8 -DSTATISTICS=0 -DDISPLAY_CROPPED_INSTEAD_OF_SCALING=ON -DUSE_DMA_TRANSFERS=ON -DBACKLIGHT_CONTROL=OFF
+```
+
 # Introduction
 
 This repository implements a driver for certain SPI-based LCD displays for Raspberry Pi A, B, 2, 3, 4 and Zero.
