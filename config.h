@@ -2,6 +2,8 @@
 
 // Build options: Uncomment any of these, or set at the command line to configure:
 
+#define DISPLAY_SPI_DRIVE_SETTINGS (BCM2835_SPI0_CS_CPOL | BCM2835_SPI0_CS_CPHA)
+
 // If defined, renders a performance overlay on top of the screen. This option is passed from CMake
 // configuration script. If you are getting statistics printed on screen
 // even when this is uncommented, pass -DSTATISTICS=0 to CMake invocation line. You can also try
@@ -155,11 +157,11 @@
 // If defined, rotates the display 180 degrees. This might not rotate the panel scan order though,
 // so adding this can cause up to one vsync worth of extra display latency. It is best to avoid this and
 // install the display in its natural rotation order, if possible.
-// #define DISPLAY_ROTATE_180_DEGREES
+#define DISPLAY_ROTATE_180_DEGREES
 
 // If defined, displays in landscape. Undefine to display in portrait. When changing this, swap
 // values of DISPLAY_WIDTH and DISPLAY_HEIGHT accordingly
-#define DISPLAY_OUTPUT_LANDSCAPE
+// #define DISPLAY_OUTPUT_LANDSCAPE
 
 // If defined, the source video frame is scaled to fit the SPI display by stretching to fit, ignoring
 // aspect ratio. Enabling this will cause e.g. 16:9 1080p source to be stretched to fully cover
